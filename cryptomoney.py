@@ -22,6 +22,8 @@ while fini != True :
     else :	    
         liste_prix = requests.get('https://min-api.cryptocompare.com/data/price?fsym='+money+'&tsyms=USD,EUR')
         prix=liste_prix.json()
+        nom_money = datas['Data'][money]['FullName']
+        print("Voici le prix de : "+nom_money)
 
         print("1",money,"=",prix['EUR'],"€")
         print("1",money,"=",prix['USD'],"$")
